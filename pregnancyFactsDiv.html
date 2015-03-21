@@ -25,8 +25,9 @@
 	background-color: none;
 	position:relative;
 	text-shadow: white 1px;
- //   animation-name: pulsate;
- //   animation-duration: 2s;
+  animation: pulsate 1.5s infinite;
+  //animation-duration: 2s;
+  //animation-repeat: ;
 }
 
 </style>
@@ -52,7 +53,7 @@ request.open("GET", 'Facts.txt', true);
 // the following code runs the function that parses the text file into a usable array once it picks up the data. 
 request.onreadystatechange = function (){
 
-if(request.readyState == 4 || request.status ===200)
+if(request.readyState == 4)
 {
 // factsArray will contain the values as an array: ["string", "string", "another string"];
 factsArray = JSON.parse(request.response);
@@ -79,10 +80,10 @@ function newFact () { 		  // create a loop function
 	i++;                     //  increment the counter
       if (i < factsArray.length) {            //  if the counter < the length of the array, call the loop function
          newFact();             //  ..  again which will trigger another 
-      } else {i=0; newFact();}
+      } else {i=1; newFact();}
 
 	  //  ..  setTimeout()
-   }, 900)						// this is the amount of seconds passing by (in milliseconds)
+   }, 1500)						// this is the amount of seconds passing by (in milliseconds)
 }
 newFact(); 						// call this function to begin the loop. 
 
