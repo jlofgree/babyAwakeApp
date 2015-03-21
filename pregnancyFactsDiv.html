@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<style>
+.container {width:75%; height:100% position:relative; float:left;}
+
+/* The animation code */
+
+/*@keyframes example {
+    from {height: 50%; width:50%; margin-left:25%;}
+    to {height: 100%; width:100%; margine-left:none;}
+}*/
+
+@keyframes pulsate {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+  }
+/* The class to apply the animation to */
+.factoids {
+	margin: 0% 15%;
+	text-align: justify;
+	background-color: none;
+	position:relative;
+	text-shadow: white 1px;
+ //   animation-name: pulsate;
+ //   animation-duration: 2s;
+}
+
+</style>
+
+<script>
+// This function will begin to run as soon as the div elements load.
+<!-- function runScript(facts){ -->
+
+/*
+// the purpose of this code is: 
+// 1- to pull a fact through an AJAX request
+// 2- to populate a div element with text
+// 3- to trigger a css animation -- popping out at the viewer
+// 4- to respond to a timer. A new fact will be pulled at random (or in sequence for the sake of keeping things simple)
+// 5- optional: adding audio to accompany the animation. for kicks. 
+*/
+
+
+// the following code sets the ajax request
+var request = new XMLHttpRequest();
+request.open("GET", 'Facts.txt', true);
+
+// the following code runs the function that parses the text file into a usable array once it picks up the data. 
+request.onreadystatechange = function (){
+
+if(request.readyState == 4 || request.status ===200)
+{
+// factsArray will contain the values as an array: ["string", "string", "another string"];
+factsArray = JSON.parse(request.response);
+
+
+
+
+
+
+
+// I send out array values through a loop
+
+var i = 1;                     //  counter set to 0 (so that I can pull index 0 from an array)
+function newFact () { 		  // create a loop function
+				
+				//I'll begin with broadcasting index 0, since all the others will be looped in later
+				if(i==1){document.getElementById('facts').innerHTML = factsArray[0];}
+				
+				
+   setTimeout(function () {    //  call a 30 second setTimeout when the loop is called
+	document.getElementById('facts').innerHTML = factsArray[i];   //write the array value to the document
+		// add in the css animation manipulation here
+	
+	i++;                     //  increment the counter
+      if (i < factsArray.length) {            //  if the counter < the length of the array, call the loop function
+         newFact();             //  ..  again which will trigger another 
+      } else {i=0; newFact();}
+
+	  //  ..  setTimeout()
+   }, 900)						// this is the amount of seconds passing by (in milliseconds)
+}
+newFact(); 						// call this function to begin the loop. 
+
+
+
+}
+//I am now outside of the IF statement.
+
+
+}
+
+request.send();
+
+// the loop will assure that one fact is pulled at a time.
+// this loop will respond to a timer. 
+
+
+
+
+
+<!-- } -->
+</script>
+</head>
+
+<body>
+<!-- You want to inject the JS code into the head scripts from an external javaScript file -->
+<!-- You want to do the same wiht the CSS code -- inject it from an outside css file -->
+
+<!-- Once the div loads, the runScript() function will fire. This ensures that the external JS codes don't run before the elements finish loading -- that could cause errors and make things complicated for us. The JS will fire right after everything is loaded :)  -->
+
+<!-- This first div stays fixed along the top of the screen -->
+<!-- <div onload="runScript()" class="container">  -->
+<div class="container">
+
+<!-- this div will show the output for the pregnancy facts  -->
+<!-- This is also the div that will pop out and in again upon transition -->
+<div id="facts" class="factoids"></div>
+
+
+
+
+</div>
+</body>
+</html>
