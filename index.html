@@ -4,9 +4,36 @@
 	<meta charset="utf-8">
 	<title>Baby Awake App</title>
 </head>
-<body>
+
+
+
+<body onload="runScript()">
+<!-- You want to inject the JS code into the head scripts from an external javaScript file -->
+<!-- You want to do the same wiht the CSS code -- inject it from an outside css file -->
+
+<!-- Once the div loads, the runScript() function will fire. This ensures that the external JS codes don't run before the elements finish loading -- that could cause errors and make things complicated for us. The JS will fire right after everything is loaded :)  -->
+
+
+
+
+
+
+
+
+
+
+
 <div id="container_main">
-	<div id="container_tips"></div>
+
+<!-- This first div stays fixed along the top of the screen -->
+	<div id="container_tips">
+	<!-- this div will show the output for the pregnancy facts  -->
+<!-- This is also the div that will pop out and in again upon transition -->
+<div id="facts" class="factoids"></div>
+
+	</div>
+
+
 	<div id="container_graph-canvas"></div>
 	<div id="container_input"></div>
 </div>

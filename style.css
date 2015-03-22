@@ -1,0 +1,36 @@
+/*this container will rest along the top of the screen. Manipulate this to put the facts at the top of the page.
+	the facts div is actually inside this container, and will be manipulated by a different class.
+*/
+.container_tips {
+    width: 75 % ;height: 100 % position: relative;float: left;
+}
+
+/* The animation code */
+/* The below keyframe makes it so the reference "example" can be used to make a custom animation*/
+/*@keyframes example {
+    from {height: 50%; width:50%; margin-left:25%;}
+    to {height: 100%; width:100%; margin-left:none;}
+}*/
+
+
+/*Custom animation - pulsing*/
+@
+keyframes pulsate {
+    0 % {
+        transform: scale(1);
+    }
+    50 % {
+        transform: scale(1.3);
+    }
+    100 % {
+        transform: scale(1);
+    }
+}
+/* The class to apply the animation to */
+.factoids {
+    margin: 0 % 15 % ;
+    text - align: justify;
+    background - color: none;
+    position: relative;
+    animation: pulsate 1.5 s infinite;
+}
