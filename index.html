@@ -2,14 +2,50 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
 	<title>Baby Awake App</title>
+
+<!-- ======= -->
+<!-- CSS     -->
+<!-- ======= -->
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
 </head>
 <body>
 <div id="container_main">
-	<div id="container_tips"></div>
-	<div id="container_graph-canvas"></div>
+	<div id="container_tips">
+	</div>
+
+	<div id="container_graph">
+
+		<div class="time_column">
+			<div class="time_hours">
+				<div class="time mid_am">m</div>
+				<div class="time three_am">3</div>
+				<div class="time six_am">6</div>
+				<div class="time nine_am">9</div>
+				<div class="time noon">noon</div>
+				<div class="time three_pm">3</div>
+				<div class="time six_pm">6</div>
+				<div class="time mid_pm">9</div>
+			</div>
+
+			<div class="time_curr_month">march</div>
+		</div>
+
+		<div class="graph">
+		</div>
+	</div>
+
 	<div id="container_input"></div>
 </div>
+
+
+<!-- ====== -->
+<!-- SCRIPTS  -->
+<!-- ====== -->
+<script src="js_graph.js"></script>
 
 </body>
 </html>

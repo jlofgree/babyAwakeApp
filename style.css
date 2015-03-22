@@ -1,0 +1,74 @@
+/* ==================================
+ MAIN CONTAINERS
+ ====================================*/
+body{
+	font-size: 100%;
+	border: 1px solid blue;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+#container_main{
+	border: 1px solid purple;
+	height: 100%;
+}
+
+#container_tips{
+	height: 25%;
+}
+
+#container_graph{
+	border: 1px solid yellow;
+	position: relative;
+	height: 50%;
+}
+
+#container_input{
+	height: 25%;
+}
+
+
+/* ==================================
+	GRAPH 
+ ====================================*/
+
+.time_column{
+	width: 10%;
+	height: 100%;
+	border: 1px solid green;
+}
+
+.time_column .time_hours{
+	height: 88%;
+}
+
+.time_column .time_hours .time{
+	/*border: 1px solid red;*/
+	height: 12.5%;
+}
+
+.time_column .time_curr_month{
+	background: #1990ff;
+	height: 12%;
+}
+
+.time_column .mid_am{background: green;}
+.time_column .three_am{background: #1990ff;}
+.time_column .six_am{background: yellow;}
+.time_column .nine_am{background: orange;}
+.time_column .noon{background: red;}
+.time_column .three_pm{background: blue;}
+.time_column .six_pm{background: green;}
+.time_column .mid_pm{background: purple;}
+
+.graph{
+	position: absolute;
+	top: 0px;
+	left: 10%;
+	width: 90%;
+	height: 100%;
+	overflow: hidden;
+}
