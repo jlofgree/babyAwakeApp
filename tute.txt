@@ -1,0 +1,19 @@
+﻿[       
+"During pregnancy, if the mother suffers organ damage, the baby in the womb sends stem cells to repair the damaged organ.",
+
+"Pregnant women, at a healthy weight, only need to eat an extra 300 calories per day.",
+
+"Pregnant women have about 50% more blood by week 20 of pregnancy than they did before they conceived.",
+
+"Rabbits, dogs, pigs, whales, and humans all start as eggs roughly the same size (around 0.2mm).",
+
+"A baby’s fingerprints are set within the first three months of pregnancy.",
+
+"4% of women in the US are pregnant!",
+
+"Male seahorses can get pregnant",
+
+"Babies can cry in the womb!",
+
+"A woman can get pregnant while already pregnant."
+]
