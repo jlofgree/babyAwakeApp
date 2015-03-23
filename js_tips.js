@@ -18,12 +18,12 @@ function runScript() {
 
         if (request.readyState == 4) {
             // factsArray will contain the values as an array: ["string", "string", "another string"];
-            factsArray = JSON.parse(request.response);
+            var factsArray = JSON.parse(request.responseText);
 
             // I send out array values through a loop
 
             var i = 1; //  counter set to 0 (so that I can pull index 0 from an array)
-            function newFact() { // create a loop function
+            var newFact = function() { // create a loop function
 
                 //I'll begin with broadcasting index 0, since all the others will be looped in later
                 if (i == 1) {
@@ -44,17 +44,15 @@ function runScript() {
                         }
 
                         //  ..  setTimeout()
-                    }, 1500) // this is the amount of seconds passing by (in milliseconds)
-            }
+                    }, 3500); // this is the amount of seconds passing by (in milliseconds)
+            };
             newFact(); // call this function to begin the loop. 
         }
         //I am now outside of the IF statement.
 
-    }
-
+    };
     request.send();
 
     // the loop will assure that one fact is pulled at a time.
     // this loop will respond to a timer. 
-
 }
