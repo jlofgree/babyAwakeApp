@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
   <title>Time Graph</title>
-    <script src="JS/barney.js"></script>
-    <link rel="stylesheet" type="text/css" href="CSS/barney.css"> 
+    <script src="BAtimeGraph.js"></script>
+    <link rel="stylesheet" type="text/css" href="BAtimeGraph.css"> 
 </head>
 <body>
 	<!-- Holder class sets overflow hidden and makes border -->
@@ -15,7 +15,8 @@
     </div>
   </div>
   	<!-- Awake Button triggers blue bar placement and activates pulse -->
-  <div class="AwakeButton" onClick="setPosition('bar')"> Awake Button
+  <div class="AwakeButton" onClick="setPosition('bar'),storeDate()"> Awake Button
   </div>  
+
 </body>
 </html>

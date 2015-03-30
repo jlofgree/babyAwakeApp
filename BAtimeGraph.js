@@ -12,3 +12,18 @@ function setPosition(element) {
 	document.getElementById(element).style.top = ((Hour * 60) + Minute) / 1440 * 100 + "%"; 
 	document.getElementById(element).style.left = "0px";
 }
+// Store dates in an Array
+function storeDate() {
+	var dateArray = null;
+	var dateString = localStorage.localStoredDates;
+	if(!dateString) {
+		dateArray = [];
+	}
+	else {
+		dateArray = JSON.parse(dateString);
+	}
+	dateArray.push(currentDate);
+	localStorage.localStoredDates = JSON.stringify(dateArray);
+}
+// Test what data I have
+console.log(window.localStorage.localStoredDates);
