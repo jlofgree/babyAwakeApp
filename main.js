@@ -1,5 +1,32 @@
+function runScript(){
+	loadTips();
+	loadGraph();
+}
+
+function loadGraph(){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // This function will begin to run as soon as the body elements load.
-function runScript() {
+function loadTips() {
     /*
     // the purpose of this code is: 
     // 1- to pull a fact through an AJAX request
