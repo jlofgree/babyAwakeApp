@@ -112,3 +112,13 @@ body{
     position: relative;
     animation: pulsate 1.5s infinite;
 }
+
+/* ==================================
+ INPUT
+ ====================================*/
+ #input{
+ 	background-color: green;
+ 	width: 100px;
+ 	height: 100px;
+ 	margin: 0 auto;
+ }
