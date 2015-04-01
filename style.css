@@ -117,8 +117,8 @@ body{
  INPUT
  ====================================*/
  #input{
- 	background-color: green;
- 	width: 100px;
- 	height: 100px;
+ 	/*background-color: green;*/
+ 	width: 20%;
+ 	height: 100%;
  	margin: 0 auto;
  }
