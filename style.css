@@ -116,9 +116,15 @@ body{
 /* ==================================
  INPUT
  ====================================*/
- #input{
- 	/*background-color: green;*/
- 	width: 20%;
+
+ #input-img{
+ 	display: block;
  	height: 100%;
- 	margin: 0 auto;
+ 	width: 20%;
+ 	margin: 0px auto;
+ 	transition-property: transform;
+ 	transition-duration: 2s;
  }
+
+ 
+ 
