@@ -12,12 +12,20 @@
     position: relative;
     left: 1000px;
     top: "";
+  }
+  .pulseBar {
+    background: blue;
+    height: 2px;
+    width: "";
+    position: relative;
+    left: 1000px;
+    top: "";
     -webkit-animation: pulse 3s infinite;
   }
   @-webkit-keyframes pulse {
     from {width: 1%;}
     to {width: 100%;}
-  }
+  }  
   .AwakeButton {
     width: 60px;
     height: 60px;

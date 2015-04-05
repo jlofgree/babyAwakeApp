@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML>
 <html lang="en-us">
 <head>
@@ -7,16 +6,11 @@
     <script src="BAtimeGraph.js"></script>
     <link rel="stylesheet" type="text/css" href="BAtimeGraph.css"> 
 </head>
-<body>
+<body onload="displayGraph(); testFunction();"> <!-- ADD TO TEST >>>  <<<  -->
 	<!-- Holder class sets overflow hidden and makes border -->
-  <div class="holder">
-  	<!-- Bar class is pulsing blue bar (off-screen onload) -->
-    <div id="bar" class="bar">  
-    </div>
+  <div id="holder" class="holder">
   </div>
   	<!-- Awake Button triggers blue bar placement and activates pulse -->
-  <div class="AwakeButton" onClick="setPosition('bar'),storeDate()"> Awake Button
-  </div>  
-
+  <div class="AwakeButton" onclick="storeDate(),pulseBar()">Awake Button</div>   
 </body>
 </html>
