@@ -30,13 +30,20 @@ function loadTips() {
 
                 //I'll begin with broadcasting index 0, since all the others will be looped in later
                 if (i == 1) {
-                    document.getElementById('facts').innerHTML = factsArray[0];
+                    document.getElementById('factsEven').innerHTML = factsArray[0];
                 }
 
 
                 setTimeout(function() { //  call a 30 second setTimeout when the loop is called
-                        document.getElementById('facts').innerHTML = factsArray[i]; //write the array value to the document
-                        // add in the css animation manipulation here
+                        if(i%2==0){
+						document.getElementById('factsEven').innerHTML = factsArray[i]; //write the array value to the document
+						}
+						if(i%2==1){
+						document.getElementById('factsOdd').innerHTML = factsArray[i]; //write the array value to the document
+						factsOdd.classList.add('factoidsOdd');
+
+						}
+						// add in the css animation manipulation here
 
                         i++; //  increment the counter
                         if (i < factsArray.length) { //  if the counter < the length of the array, call the loop function
@@ -47,9 +54,10 @@ function loadTips() {
                         }
 
                         //  ..  setTimeout()
-                    }, 3500); // this is the amount of seconds passing by (in milliseconds)
+                    }, 7000); // this is the amount of seconds passing by (in milliseconds)
             };
             newFact(); // call this function to begin the loop. 
+			
         }
         //I am now outside of the IF statement.
 

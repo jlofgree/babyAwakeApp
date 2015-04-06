@@ -93,24 +93,33 @@ body{
 }*/
 
 /*Custom animation - pulsing*/
-@keyframes pulsate{
+@keyframes slide{
     0% {
-        transform: scale(1);
+        left: -200px;
     }
-    50% {
-        transform: scale(1.02);
+    25% {
+        left: 50px; 
     }
+	50% {left: 5px; }
+	
     100% {
-        transform: scale(1);
+        left: 0px; 
     }
 }
 /* The class to apply the animation to */
-.factoids {
+.factoidsOdd {
     margin: 0% 15% ;
     text-align: justify;
     background-color: #ffffd9;
-    position: relative;
-    animation: pulsate 1.5s infinite;
+    position: fixed;
+    animation: slide 7s infinite;
+}
+.factoidsEven {
+    margin: 0% 15% ;
+    text-align: justify;
+    background-color: #ffffd9;
+    position: fixed;
+    animation: slide 7s infinite;
 }
 
 /* ==================================
