@@ -54,7 +54,7 @@ function loadTips() {
                         }
 
                         //  ..  setTimeout()
-                    }, 7000); // this is the amount of seconds passing by (in milliseconds)
+                    }, 6000); // this is the amount of seconds passing by (in milliseconds)
             };
             newFact(); // call this function to begin the loop. 
 			

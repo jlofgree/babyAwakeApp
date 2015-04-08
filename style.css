@@ -92,35 +92,78 @@ body{
     to {height: 100%; width:100%; margin-left:none;}
 }*/
 
-/*Custom animation - pulsing*/
+/*Custom animation*/
+/*
+@keyframes slideEven{
+	0% {left: -1200px;}
+	50% {left:0px;}
+	75% {left: 0px;}
+	100% {display:-1200px;}
+	}
+
+
 @keyframes slide{
-    0% {
-        left: -200px;
-    }
-    25% {
-        left: 50px; 
-    }
-	50% {left: 5px; }
+	0% {left: -1200px;}
+	50% {left:0px;}
+	75% {left: 0px;}
+	100% {display:-1200px;}
+    
+}
+*/
+
+#factsEven {
+    position: absolute;
+    left: -1200px;
+    width: 25%;
+    height: 100px;
+    background: ffffd9;
+    animation: slide 12s forwards infinite;
+/* 12 second slide  */
 	
-    100% {
-        left: 0px; 
-    }
 }
+#factsOdd {
+    position: absolute;
+    left: -1200px;
+    width: 25%;
+    height: 100px;
+    background: ffffd9;
+    animation: slide 12s forwards infinite;
+    animation-delay: 6s;
+/* 12 second slide that begins halfway through the last animation */
+}
+
+@-webkit-keyframes slide {
+    50% { left: 0;}
+    100% { left: 0;}
+}
+
+@keyframes slide {
+
+    0% { left: -1200px;}
+    10% {left: 0px;}
+    50% {left: 0px;}
+    75% {left:-1200px;}    
+	99% {}
+	100%{}
+}
+
+
 /* The class to apply the animation to */
-.factoidsOdd {
+
+.factoids {
     margin: 0% 15% ;
     text-align: justify;
     background-color: #ffffd9;
-    position: fixed;
-    animation: slide 7s infinite;
-}
+    position: absolute;
+}/*
 .factoidsEven {
+	display:-1200px;
     margin: 0% 15% ;
     text-align: justify;
     background-color: #ffffd9;
-    position: fixed;
-    animation: slide 7s infinite;
-}
+    position: absolute;
+    animation: slideEven 3s infinite;
+}*/
 
 /* ==================================
  INPUT
